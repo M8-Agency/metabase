@@ -425,7 +425,7 @@ export default class Visualization extends Component<*, Props, State> {
 const extractRemappings = (series) => {
     return series.map(s => ({
         ...s,
-        data: extractRemappedColumns(s.data)
+        data: s.data && extractRemappedColumns(s.data)
     }));
 }
 
